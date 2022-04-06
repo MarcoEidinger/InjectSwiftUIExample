@@ -1,7 +1,9 @@
+import Inject
 import LocalPackage
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject private var iO = Inject.observer
     @State var selection: Int = 0
     var body: some View {
         TabView(selection: $selection) {
@@ -13,6 +15,7 @@ struct HomeView: View {
                 .tag(2)
         }
         .environmentObject(AppViewModel())
+        .enableInjection()
     }
 }
 
