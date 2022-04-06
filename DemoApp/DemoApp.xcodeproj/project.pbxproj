@@ -14,6 +14,7 @@
 		8A69891A27FD4E5000D4BCD3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A69891927FD4E5000D4BCD3 /* ViewModel.swift */; };
 		8A69891C27FD4EC400D4BCD3 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A69891B27FD4EC400D4BCD3 /* Home View.swift */; };
 		8AA241E827FE05BE003C85E2 /* LocalPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA241E727FE05BE003C85E2 /* LocalPackage */; };
+		8AA2422627FE5B8C003C85E2 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA2422527FE5B8C003C85E2 /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA241E827FE05BE003C85E2 /* LocalPackage in Frameworks */,
+				8AA2422627FE5B8C003C85E2 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,7 @@
 			name = DemoApp;
 			packageProductDependencies = (
 				8AA241E727FE05BE003C85E2 /* LocalPackage */,
+				8AA2422527FE5B8C003C85E2 /* Inject */,
 			);
 			productName = DemoApp;
 			productReference = 8A69890527FD4B4C00D4BCD3 /* DemoApp.app */;
@@ -141,6 +144,7 @@
 			);
 			mainGroup = 8A6988FC27FD4B4C00D4BCD3;
 			packageReferences = (
+				8AA2422427FE5B8C003C85E2 /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			productRefGroup = 8A69890627FD4B4C00D4BCD3 /* Products */;
 			projectDirPath = "";
@@ -373,10 +377,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		8AA2422427FE5B8C003C85E2 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		8AA241E727FE05BE003C85E2 /* LocalPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LocalPackage;
+		};
+		8AA2422527FE5B8C003C85E2 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AA2422427FE5B8C003C85E2 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
