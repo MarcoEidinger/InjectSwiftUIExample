@@ -1,6 +1,9 @@
+import Inject
 import SwiftUI
 
 public struct SettingsView: View {
+    @ObservedObject private var iO = Inject.observer
+
     public init() {}
 
     public var body: some View {
@@ -17,6 +20,7 @@ public struct SettingsView: View {
             .navigationTitle("Settings")
         }
         .navigationViewStyle(.stack)
+        .enableInjection()
     }
 }
 

@@ -13,11 +13,12 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/krzysztofzablocki/Inject.git", from: "1.0.5")
     ],
     targets: [
         .target(
             name: "LocalPackage",
-            dependencies: []
+            dependencies: ["Inject"]
         ),
     ]
 )

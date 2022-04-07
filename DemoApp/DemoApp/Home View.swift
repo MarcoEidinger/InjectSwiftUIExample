@@ -10,9 +10,7 @@ struct HomeView: View {
             ContentView()
                 .tabItem { Text("Left") }
                 .tag(1)
-            RefreshableContent(when: "\(selection)") {
-                SettingsView()
-            }
+            SettingsView()
             .tabItem { Text("Right") }
             .tag(2)
         }
@@ -24,18 +22,5 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-    }
-}
-
-struct RefreshableContent<Content: View>: View {
-    var when: String
-    var content: Content
-    init(when changed: String, @ViewBuilder content: () -> Content) {
-        when = changed
-        self.content = content()
-    }
-
-    var body: some View {
-        content
     }
 }
