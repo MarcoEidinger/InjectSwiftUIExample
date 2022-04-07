@@ -22,6 +22,7 @@ struct ContentView: View {
         .onAppear {
             self.model.loadStatus()
         }
+        .navigationViewStyle(.stack)
     }
 }
 
